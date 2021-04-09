@@ -36,20 +36,17 @@ variable "name" {
 
 variable "tags" {
 
-    description = "value"
+    description = "Tags used to describe your resources."
 
     type    = map(string)
-    default = "Tags used to describe your resources."
+    default = ""
 }
 
 variable "delimiter" {
-  
-}
 
-variable "all-uppercase" {
-  
-}
+    description = "Delimiter between other naming objects."
 
-variable "all-lowercase" {
+    type    = string
+    default = "-"
   
 }
