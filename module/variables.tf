@@ -34,14 +34,6 @@ variable "name" {
   
 }
 
-variable "tags" {
-
-    description = "Tags used to describe your resources."
-
-    type    = map(string)
-    default = ""
-}
-
 variable "delimiter" {
 
     description = "Delimiter between other naming objects."
