@@ -8,6 +8,7 @@ This module creates a generic naming convention for all your resources.
 | Software     |  Version  |
 | :--------    | :-------- |
 | terraform    | >= 0.13.0 |
+
 &nbsp;
 # Getting started
 ```hcl
@@ -20,6 +21,7 @@ module "autolabel" {
     stage     = "prod"
     name      = "webapp-1"
     delimiter = "-"
+    
 }
 ```
 &nbsp;
