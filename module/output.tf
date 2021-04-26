@@ -8,6 +8,6 @@ output "name" {
 output "no_special_chars" {
 
   value = local.no_special_chars
-  description = "Concaternated input objects without special chararctes"
+  description = "Concaternated input objects without special chararctes."
 
 }
