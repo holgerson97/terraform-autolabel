@@ -17,7 +17,8 @@ module "autolabel" {
     source = "github.com/holgerson97/terraform-autolabel//module"
 
     enabled = true
-    namespace = "customer-1"
+    prefix    = "customer-1"
+    namespace = "homepage"
     stage     = "prod"
     name      = "webapp-1"
     delimiter = "-"
@@ -26,13 +27,20 @@ module "autolabel" {
 ```
 &nbsp;
 # Variables
-| Variable  |  Type    | Description                                       |
-| :---------| :------: | :------------------------------------------------ |
-| enabled   | bool     | Enables the module to create any resources.       |
-| namespace | string   | Namespace you are creating your resources in.     |
-| stage     | string   | Current stage you are creating your resources in. |
-| name      | string   | Specify name for your resources.                  |
-| delimiter | delimiter| Delimiter between other naming objects.           |
+| Variable    |  Type    | Description                                                     |
+| :---------- | :------: | :-------------------------------------------------------------- |
+| `enabled`   | bool     | Enables the module to create any resources.                     |
+| `prefix`    | string   | Append letters in front of your label. For example client name. |
+| `namespace` | string   | Namespace you are creating your resources in.                   |
+| `stage`     | string   | Current stage you are creating your resources in.               |
+| `name`      | string   | Specify name for your resources.                                |
+| `delimiter` | delimiter| Delimiter between other naming objects.                         |
+
+# Outputs
+| Name               |  Value                                                  |
+| :----------------- | :-----------------------------------------------------: | 
+| `name`             | Concaternated input objects.                            | 
+| `no_special_chars` | Concaternated input objects without special chararctes. |
 
 &nbsp;
 ## Contributing
