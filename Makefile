@@ -35,11 +35,9 @@ gotest-basic: ## test units files
 
 gotest-required:
 	cd unit-tests/
-	go test terraform_test.go -run TestAzureResourcesRequired -v -timeout 60min
 
 gotest-optional:
 	cd unit-tests/
-	go test terraform_test.go -run TestAzureResourcesOptional -v -timeout 60min
 
 gotest-all:
 	cd unit-tests/
@@ -61,7 +59,7 @@ terraApplyAndDestroy: ## Init, Apply and Destroy Terraform configuration
 	terraform apply --auto-approves
 	terraform destroy --auto-approve
 
-terra-all: terrafmt terralint terravalidate terraApplyAndDestroy
+terra-all: terrafmt terralint terravalidate
 
 clean:
 	go clean
